@@ -6,7 +6,6 @@ function startTime() {
     var dias = hoje.getDay();
     var data = hoje.getDate();
     var mes = hoje.getMonth();
-    var verificarMes = hoje.getMonth();
     var ano = hoje.getFullYear();
     var dia = dias;
 
@@ -80,12 +79,8 @@ function startTime() {
     document.getElementById('hora').innerHTML = horas + ":" + minutos;
     t = setTimeout('startTime()', 500);    
 
-    if (ano < 2021) {
+    if (ano < 2022) {
         document.getElementById('txt').innerHTML = "verifique a data do seu dispositivo!" + "<br>" + dia + "," + " " + data + " " + "de" + " " + mes + " " + "de" + " " + ano + " " + " | " + horas + ":" + minutos + ":" + segundos + " " + " " + " " + "<br>" + "o ano: " + "''" + ano + "''" + " Está errado ";
-    }
-
-    else if (verificarMes < 10) {
-        document.getElementById('txt').innerHTML = "verifique a data do seu dispositivo!" + "<br>" + dia + "," + " " + data + " " + "de" + " " + mes + " " + "de" + " " + ano + " " + " | " + horas + ":" + minutos + ":" + segundos + " " + " " + " " + "<br>" + "o mês: " + "''" + mes + "''" + " Está errado ";
     }
 }
 
