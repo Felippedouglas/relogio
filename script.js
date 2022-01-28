@@ -90,3 +90,7 @@ function checkTime(i) {
     }
     return i;
 }
+
+
+
+var tempo = setInterval(startTime,1000)
