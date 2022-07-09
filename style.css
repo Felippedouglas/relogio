@@ -7,15 +7,33 @@
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  height: 90vh;
+  height: 100vh;
   font-family: Arial, sans-serif;
   color: #fff;
   background-color: #000;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.all-content {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#mensagem {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  background-color: #18181886;
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  border-radius: 50px;
 }
 
 #hora {
@@ -34,47 +52,55 @@ body {
   position: absolute;
   bottom: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 18px;
   color: #fff;
   padding: 0 50px;
   height: 70px;
   width: 100%;
-  background-color: rgb(50, 50, 50);
+  background-color: #181818;
 }
 
-.creditos-redes-sociais a{
-  position: relative;
-  color: #fff;
-  text-decoration: none;
-  font-size: 25px;
-  transition: .3s;
-  padding: 5px;
+@media (max-width: 1100px) {
+
+  body {
+    background-size: 150%;
+  }
 }
 
-.creditos-redes-sociais a:hover{
-  font-size: 30px;
-  transition: .3s;
+@media (max-width: 800px) {
+
+  body {
+    background-size: 250%;
+  }
 }
 
-.creditos-redes-sociais a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+@media (max-width: 500px) {
+
+  body {
+    background-size: 350%;
+  }
+
+  #hora {
+    font-size: 50px;
+  }
+
+  #txt-data {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .footer-creditos {
+    font-size: 15px;
+  }
+
 }
 
-.creditos-redes-sociais a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+@media (max-width: 350px) {
+
+  body {
+    background-size: 450%;
+  }
+  
 }
